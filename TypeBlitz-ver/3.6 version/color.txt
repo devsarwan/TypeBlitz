@@ -1,0 +1,5 @@
+#466089: Steel Blue
+#6e83b7: Light Slate Blue
+#98ca69: Pistachio
+#ffb0aa: Melon
+#ffe352: Lemon Yellow
