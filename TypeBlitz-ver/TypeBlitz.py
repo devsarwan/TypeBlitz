@@ -1,6 +1,5 @@
+import tkinter
 from tkinter import *
-import webbrowser
-from tkinter import messagebox
 from ctypes import *
 import ctypes
 from PIL import Image, ImageTk
@@ -10,7 +9,7 @@ from datetime import datetime
 splash = Tk()
 splash.title("Welcome")
 splash.overrideredirect(True)
-splash.iconbitmap("TypeBlitz_Icon.ico")
+splash.iconbitmap("TypeBlitz.ico")
 splash.resizable(False, False)
 splash.attributes("-topmost", True)
 
@@ -28,11 +27,11 @@ def check_screen_default():
     
         global hdroot_sec
         hdroot_sec = Tk()
-        bgcolor="#6e83b7"
+        bgcolor="#f3eadd"
         hdroot_sec.config(bg=bgcolor)
         hdroot_sec.title("TypeBlitz")
         hdroot_sec.overrideredirect(True)
-        hdroot_sec.iconbitmap("TypeBlitz_Icon.ico")
+        hdroot_sec.iconbitmap("TypeBlitz.ico")
         hdroot_sec.resizable(False, False)
         
         ctypes.windll.shcore.SetProcessDpiAwareness(1)
@@ -51,117 +50,6 @@ def check_screen_default():
             hdroot_sec.geometry("1280x700+0+0")
         else:
             hdroot_sec.geometry("1280x700+0+0")
-        
-        def open_web():
-            try:
-                print("\033[32m ---->> Redirected to Browser\033[0m")
-                webbrowser.open("https://sarwanboi.github.io/Skill-Improver.github.io")
-            except webbrowser.Error as web_error:
-                messagebox.showerror("Web Browser Error", f"Could not open the web page: {web_error}")
-            except Exception as e:
-                messagebox.showerror("Error", f"An unexpected error occurred: {e}")
-                        
-        def about_app():
-            about_tk = Toplevel(hdroot_sec)
-            about_tk.config(bg="#FCFCFC")
-            about_tk.geometry("340x230")
-            about_tk.title("About")
-            about_tk.iconbitmap("TypeBlitz_Icon.ico")
-            about_tk.resizable(False, False)
-            ctypes.windll.shcore.SetProcessDpiAwareness(1)
-            acolo = "#EEE"
-            half_frame = Frame(about_tk, width=340, height=60, bg=acolo)
-            half_frame.place(x=0, y=0)
-            ld = Label(half_frame, text="TYPEBLITZ", border=0, background=acolo, fg="#CDCDCD",
-                    font=("Calibri (Body)", 20, "bold"))
-            ld.place(relx=0.5, rely=0.5, anchor="center")
-
-            labels_data = [
-                ("UI:", 26, 80),
-                ("1.2", 200, 80),
-                ("Version:", 26, 120),
-                ("1.8 (Production)", 200, 120),  # Indicate that version 3.6 is the production version
-                ("Released Date:", 26, 160),
-                ("December 06, 2023", 200, 160),
-                ("Developer:", 26, 200),
-                ("Sarwan Yadav", 200, 200)
-            ]
-
-            for i, (text, x, y) in enumerate(labels_data):
-                label = Label(about_tk, text=text, border=0, background="#FCFCFC", fg="#010101",
-                            font=("Calibri (Body)", 10, "bold"))
-                label.place(x=x, y=y)
-                if i % 2 == 1:
-                    label = Label(about_tk, text=text, border=0, background="#FCFCFC", fg="#000",
-                                font=("Calibri (Body)", 10, "bold"))
-                    label.place(x=x, y=y)
-
-            print("\033[34m ---->> About Application\033[0m")
-            about_tk.mainloop()
-        
-        def home_page():
-            print("\033[37m -->> Home Page\033[0m")
-            default = Frame(hdroot_sec,bg=bgcolor, width=1280, height=700)
-            default.pack()
-            
-            # ***************************************************************************************************************************************************  #
-            
-            def load_images(image_files):
-                images = {}
-                try:
-                    for file in image_files:
-                        with Image.open(file) as img:
-                            images[file] = ImageTk.PhotoImage(img)
-                except Exception as e:
-                    print(f" -->> \033[37mCache: \033[31mError loading image {file}: {str(e)}")
-                    return None
-                return images
-            image_files = ["TypeBlitz2.png", "exit.png", "TypeBlitz_side.png", "TypeBlitz_side_in_a.png", "TypeBlitz_side_in_b.png", 
-                           "button_word.png", "button_paragraph.png", "web.png", "about.png", "update.png"]
-            images = load_images(image_files)
-            
-            # ***************************************************************************************************************************************************  #
-            
-            la = Label(hdroot_sec, image=images["TypeBlitz2.png"], border=0, background=bgcolor)
-            la.place(x=100, y=100)
-            
-            option = Frame(hdroot_sec, width=500, height=500)
-            option.place(x=700, y=100)
-            lb = Label(option, image=images["TypeBlitz_side.png"], border=0, background=bgcolor)
-            lb.pack()   
-            closebtn = Button(option, image=images["exit.png"], background="#466089", activebackground="#466089", command=hdroot_sec.destroy, border=0)
-            closebtn.place(x=440, y=10)
-            
-            option_in_a = Frame(option, width=350, height=210, bg="#466089")
-            option_in_a.place(x=75, y=65)
-            lc = Label(option_in_a, image=images["TypeBlitz_side_in_a.png"], border=0, background="#466089")
-            lc.pack()   
-            header = Label(option_in_a, text="Type Test", font=("Helvetica", 17, "bold"), bg="#FFF", fg="#000")
-            header.place(x=20, y=24) 
-            sub_header = Label(option_in_a, text="Select a Type of Test:", font=("Helvetica", 13), bg="#FFF", fg="#75a7e5")
-            sub_header.place(x=26, y=70)
-            wordbtn = Button(option_in_a, image=images["button_word.png"], background="#FFF", activebackground="#FFF", border=0)
-            wordbtn.place(x=36, y=140)
-            parabtn = Button(option_in_a, image=images["button_paragraph.png"], background="#FFF", activebackground="#FFF", border=0)
-            parabtn.place(x=176, y=140)
-                        
-            option_in_b = Frame(option, width=350, height=120, bg="#FFF")
-            option_in_b.place(x=75, y=330)
-            ld = Label(option_in_b, image=images["TypeBlitz_side_in_b.png"], border=0, background="#466089")
-            ld.pack() 
-            Webbtn = Button(option_in_b, image=images["web.png"], background="#FFF", activebackground="#FFF", border=0, command=open_web)
-            Webbtn.place(x=30, y=35)
-            Aboutbtn = Button(option_in_b, image=images["about.png"], background="#FFF", activebackground="#FFF", border=0, command=about_app)
-            Aboutbtn.place(x=144, y=35)
-            updatebtn = Button(option_in_b, image=images["update.png"], background="#FFF", activebackground="#FFF", border=0)
-            updatebtn.place(x=260, y=35)
-            
-            default.bind("<B1-Motion>", move_app_sec)
-            mainloop()
-            
-            # ***************************************************************************************************************************************************  #
-            
-        home_page()
         
         hdroot_sec.bind("<B1-Motion>", move_app_sec)
         mainloop()
