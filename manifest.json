@@ -1,0 +1,29 @@
+{
+  "name": "Skill Improver",
+  "short_name": "Skill Improver",
+  "description": "Skill Improver - an easy-to-use, cutting-edge application designed for beginners and experienced typists alike. Enhance your typing skills and increase your speed.",
+  "icons": [
+    {
+      "src": "assets/img/TypeBlitz-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/img/TypeBlitz-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/img/TypeBlitz-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff"
+}

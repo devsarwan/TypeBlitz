@@ -1,0 +1,504 @@
+/* General Styles */
+#download {
+  background-color: #FFF;
+}
+
+#get-in-touch {
+  background-color: #eee;
+  color: #000;
+}
+
+/* Carousel Control Styles */
+.carousel-control-prev,
+.carousel-control-next {
+  color: #000000;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: #000000;
+}
+
+/* Common Animation Styles */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Introduction Section Animation */
+#introduction,
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preloader-inner {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #000;
+  overflow: hidden;
+  position: relative;
+}
+
+.preloader-inner::before,
+.preloader-inner::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(0);
+}
+
+.preloader-inner::before {
+  animation: morph 1.5s ease-in-out infinite alternate;
+}
+
+.preloader-inner::after {
+  animation: morph 1.5s ease-in-out 0.75s infinite alternate;
+}
+
+.preloader-inner div {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+  animation: preloader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+
+@keyframes preloader {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes morph {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes preloader {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+
+
+#scrollBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  display: none;
+  /* hide the button by default */
+}
+
+#scrollBtn.up {
+  transform: rotate(180deg);
+  /* rotate the button for "up" state */
+}
+
+#scrollBtn:hover {
+  background-color: #555;
+}
+
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+
+.contact-form {
+  margin-bottom: 50px;
+}
+
+.navbar {
+  min-height: 80px;
+  /* Change this value to increase or decrease the navbar height */
+}
+
+/* Hover animation for button */
+
+/* Keyframe animation */
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply animation to h1 element */
+#changing-text {
+  animation: moveInLeft 1s ease-out;
+}
+
+/* Define animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Apply animation to navbar links */
+.navbar-nav a {
+  animation: slideIn 0.5s forwards;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+#jumbotron {
+  animation: fade-in 1s ease-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.card-img-top {
+  width: 300px;
+  height: 200px;
+}
+
+.screenshot-card {
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animated-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.animated-button:hover::before {
+  animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+  to {
+    transform: translate(-50%, -50%) scale(40);
+    opacity: 0;
+  }
+}
+
+.loader-wrapper,
+.success-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.success-message {
+  flex-direction: column;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.success-message i {
+  font-size: 48px;
+  color: #4caf50;
+  margin-bottom: 20px;
+}
+
+.success-message p {
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+}
+
+/* Footer section */
+footer {
+  background-color: #212529;
+  color: #fff;
+}
+
+footer a {
+  color: #e3e622;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #007bff;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+footer .btn-floating {
+  background-color: #fff;
+  color: #212529;
+}
+
+footer .btn-floating:hover {
+  background-color: #007bff;
+  color: #FFF;
+}
+
+footer hr {
+  border-color: #8c8c8c;
+}
+
+footer .container {
+  max-width: 960px;
+}
+
+footer .text-center {
+  text-align: center;
+}
+
+footer .text-md-left {
+  text-align: left;
+}
+
+footer .text-md-right {
+  text-align: right;
+}
+
+#counter {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#counter p {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 0;
+  display: flex;
+  /* added to center content horizontally and vertically */
+  justify-content: center;
+  align-items: center;
+}
+
+#counter p span {
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+#counter #visitCount {
+  color: #e3e622;
+  /* yellow color for user count */
+}
+
+#counter #country {
+  color: #007bff;
+  /* blue color for user country */
+}
+
+
+
+.popup-container {
+  display: none;
+  /* hides the container by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* adds a semi-transparent black overlay */
+  z-index: 999;
+  /* ensures that the container is above other elements */
+}
+
+.popup-content {
+  position: absolute;
+  /* positions the content inside the container */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* centers the content vertically and horizontally */
+  max-width: 90%;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  /* adds a shadow to the content */
+}
+
+.close-btn {
+  position: absolute;
+  /* positions the close button inside the content */
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  /* sets the color of the close button */
+  transition: color 0.3s ease;
+  /* adds a color transition */
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: red;
+  /* changes the color of the close button on hover/focus */
+  outline: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #0069d9;
+  outline: none;
+}
+
+.btn:active {
+  background-color: #005cbf;
+}

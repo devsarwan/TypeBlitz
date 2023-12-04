@@ -1,70 +1,499 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- HTML Meta Tags -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TypeBlitz</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=yes">
+    <meta name="description" content="Enhance your typing skills and increase your speed with Skill Improver">
+    <meta name="keywords" content="skill improvement, learning, development, Sarwan Yadav">
+    <meta name="author" content="Sarwan Yadav">
+    <meta name="theme-color" content="#RRGGBB">
+    <meta name="content-language" content="en-US">
 
-        header {
-            background-color: #3498db;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
+    <!-- Links to external resources -->
+    <link rel="canonical" href="https://www.skill-improver.me">
+    <link rel="stylesheet" href="assets/preloader.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="assets/img/TypeBlitz.ico">
+    <link rel="manifest" href="manifest.json">
 
-        section {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
+    <!-- JavaScript resources -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <!-- jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-        h1 {
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
+    <!-- Title of the page -->
+    <title>TypeBlitz Official Website</title>
+    <script src="assets/stats.js"></script>
 
-        p {
-            font-size: 1.2em;
-            line-height: 1.5;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #3498db;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: #2980b9;
-        }
-    </style>
 </head>
-<body>
 
-    <header>
-        <h1>TypeBlitz</h1>
-    </header>
+<body style="--i:0;">
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
 
-    <section>
-        <p>Introducing TypeBlitz: a free, user-friendly app for effortless typing skill improvement. With its small size, it provides a seamless experience, making learning fast typing skills easy and enjoyable. Download today for a journey towards faster, accurate typing mastery.</p>
-        
-        <a href="#" class="cta-button">Download Today</a>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <div class="container">
+            <a class="navbar-brand" href="#">TYPEBLITZ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#introduction">Introduction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#screenshots">Screenshots</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#download">Download</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#get-in-touch">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <section id="jumbotron">
+        <div class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white" id="backgroundImageContainer">
+            <h1 class="jumbotron-heading" id="changing-text">TypeBlitz</h1>
+            <p class="lead">Enhance Your Typing Speed and Accuracy</p>
+            <a href="production\redirect.html" class="btn btn-primary btn-lg">Download the Latest Version Now</a>
+        </div>
     </section>
 
+
+    <!-- Introduction -->
+    <section id="introduction" class="bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto text-center">
+                    <h2 class="mb-4">Introducing Our TypeBlitz</h2>
+                    <p class="lead">
+                        TypeBlitz is a revolutionary typing application designed to enhance your typing speed and
+                        accuracy. Whether you're a beginner or an experienced typist, TypeBlitz is the perfect
+                        tool to elevate your typing skills. Engage in fun and effective typing exercises with real-time
+                        feedback on your progress.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section id="screenshots" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto text-center">
+                    <h2 class="mb-4">Screenshots</h2>
+                    <div id="carouselExample" class="carousel slide fade-in" data-bs-ride="carousel"
+                        data-bs-interval="3000">
+                        <!-- data-bs-interval is set to 3000 milliseconds (3 seconds) -->
+                        <div class="carousel-inner">
+                            <!-- Carousel Items -->
+                            <div class="carousel-item active">
+                                <img src="assets/screenshots/1.png" class="d-block w-100" alt="Screenshot 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/screenshots/2.png" class="d-block w-100" alt="Screenshot 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/screenshots/3.png" class="d-block w-100" alt="Screenshot 3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/screenshots/4.png" class="d-block w-100" alt="Screenshot 4">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/screenshots/5.png" class="d-block w-100" alt="Screenshot 5">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/screenshots/6.png" class="d-block w-100" alt="Screenshot 5">
+                            </div>
+                            <!-- End Carousel Items -->
+                        </div>
+                        <!-- Carousel Controls -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                        <!-- End Carousel Controls -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Download Section -->
+    <section id="download" class="download-section">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="mt-3">Download</h1>
+                </div>
+            </div>
+
+            <!-- First Part -->
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="lead text-center">Get a previous version of Type by clicking on the buttons
+                        below.</p>
+                </div>
+                <div class="col-md-6 mx-auto text-center">
+                    <h3 class="card-title py-3">Version 1.2 (Beta)</h3>
+                    <a href="production/redirect.html" class="btn btn-primary animated-button">Download Now</a>
+                </div>
+            </div>
+            
+            <!-- Second Part
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <p class="lead text-center">More versions available for download:</p>
+                </div>
+                <div class="col-md-6 mx-auto text-center">
+                    <h3 class="card-title py-3">Version 3.4</h3>
+                    <a href="files/versions/v3.4.html" class="btn btn-primary animated-button">Download Now</a>
+                </div>
+                <div class="col-md-6 mx-auto text-center">
+                    <h3 class="card-title py-3">Version 1.8</h3>
+                    <a href="files/versions/v1.8.html" class="btn btn-primary animated-button">Download Now</a>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Get in Touch Section -->
+    <section id="get-in-touch" class="contact-form mt-5 pt-4 pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto text-center">
+                    <h2 class="mb-4">Get in Touch</h2>
+                    <form class="needs-validation" novalidate>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Your Name</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                    <div class="invalid-feedback">Please enter your name.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Your Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                            <div class="invalid-feedback">Please enter your message.</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Success Message -->
+        <div class="success-message">
+            <i class="fas fa-check-circle"></i>
+            <p>Your message has been sent successfully.</p>
+        </div>
+
+        <!-- Loader Wrapper -->
+        <div class="loader-wrapper">
+            <div class="loader"></div>
+        </div>
+    </section>
+
+    <!-- Popup Container -->
+    <div class="popup-container">
+        <div class="popup-content">
+            <h2>New version available!</h2>
+            <p>Click the button below to download the latest version of our TypeBlitz.</p>
+            <a href="production\redirect.html" class="btn" target="_blank"
+                rel="noopener noreferrer">
+                Download Now
+            </a>
+            <button class="close-btn">&times;</button>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-center text-white">
+
+        <!-- Footer Divider -->
+        <hr style="border-top: 1px solid #8c8c8c;">
+
+        <div class="container py-3">
+            <div class="row">
+                <!-- Copyright Section -->
+                <div class="col-md-6 text-center text-md-left">
+                    <p>&copy; 2023 <a href="LICENSE"> TypeBlitz.</a> All Rights Reserved.</p>
+                </div>
+
+                <!-- Developer Information Section -->
+                <div class="col-md-6 text-center text-md-right">
+                    <p>Website by <a href="https://sarwanboi.netlify.app/"
+                            aria-label="Visit the website of Sarwan Yadav, the developer of this website"
+                            target="_blank" rel="noopener noreferrer">Sarwan Yadav</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Scroll Button -->
+    <button id="scrollBtn" type="button">
+        <i class="fas fa-chevron-down"></i>
+    </button>
+
+    <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <script>
+        // Function to check if the device is a phone
+        function isPhone() {
+            return window.innerWidth <= 600; // Adjust the width as needed
+        }
+
+        // Function to set the background image based on the device
+        function setBackgroundImage() {
+            const container = document.getElementById('backgroundImageContainer');
+            const imageUrl = isPhone()
+                ? "https://p4.wallpaperbetter.com/wallpaper/406/979/698/amiga-retro-games-window-computer-wallpaper-preview.jpg"
+                : "https://p4.wallpaperbetter.com/wallpaper/808/313/191/andrew-averkin-retro-computers-retro-games-indoors-office-hd-wallpaper-preview.jpg";
+
+            container.style.backgroundImage = `url('${imageUrl}')`;
+        }
+
+        // Set the initial background image
+        setBackgroundImage();
+
+        // Update the background image on window resize (for responsiveness)
+        window.addEventListener('resize', setBackgroundImage);
+    </script>
+
+    <!--Script Set 1-->
+    <script>
+        // Navbar toggle function 
+        $(document).ready(function () {
+            $('.navbar-toggler').on('click', function () {
+                $('.navbar-collapse').collapse('toggle');
+            });
+
+            $('.navbar-nav a').on('click', function () {
+                $('.navbar-collapse').collapse('hide');
+            });
+        });
+
+        // Array of words to display
+        const words = ["Welcome To TypeBlitz"];
+        let index = 0; // Initialize index for cycling through words
+        const changingText = document.getElementById("changing-text"); // Get the HTML element to display changing text
+
+        // Function to get appropriate greeting based on current hour
+        function getGreeting() {
+            const hour = new Date().getHours();
+            return hour < 12 ? "Good Morning" : (hour < 18 ? "Good Afternoon" : "Good Evening");
+        }
+
+        // Update text every 5.2 seconds with next word and greeting
+        setInterval(() => {
+            const greeting = getGreeting();
+            const text = `${greeting}, ${words[index]}`;
+            changingText.textContent = text;
+            index = (index + 1) % words.length;
+        }, 5200);
+    </script>
+
+    <!-- Script Get in touch -->
+    <script>
+        const form = document.querySelector('.contact-form form');
+        const successMessage = document.querySelector('.success-message');
+        const loaderWrapper = document.querySelector('.loader-wrapper');
+
+        // Event listener for submitting the form
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Check if the form is valid
+            if (form.checkValidity()) {
+                // Display loader while processing
+                loaderWrapper.style.display = 'flex';
+
+                // Simulate form submission delay
+                await new Promise(resolve => setTimeout(resolve, 3000));
+
+                // Hide loader
+                loaderWrapper.style.display = 'none';
+
+                // Reset the form validation state
+                form.classList.remove('was-validated');
+
+                // Display success message
+                successMessage.style.display = 'flex';
+
+                // Reset the form after 3 seconds
+                setTimeout(() => {
+                    form.reset();
+                    successMessage.style.display = 'none';
+                }, 3000);
+            }
+        });
+
+        // JavaScript to handle form validation feedback
+        (function () {
+            'use strict';
+
+            var forms = document.querySelectorAll('.needs-validation');
+
+            Array.from(forms).forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        })();
+    </script>
+
+    <!--Script Set 2-->
+    <script>
+        const popupContainer = document.querySelector('.popup-container');
+        const closeBtn = document.querySelector('.close-btn');
+        const scrollBtn = document.querySelector('#scrollBtn');
+
+        // Display the popup after 5 seconds of page load
+        window.onload = function () {
+            setTimeout(function () {
+                popupContainer.style.display = 'block';
+            }, 5000); // Display popup after 5 seconds
+        };
+
+        // Close the popup when the close button is clicked
+        closeBtn.addEventListener('click', function () {
+            popupContainer.style.display = 'none';
+        });
+
+        // Disable right-click on the page
+        document.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+        });
+
+        // Scroll functionality
+        window.addEventListener('scroll', () => {
+            const showButton = window.scrollY > window.innerHeight * 0.2;
+            scrollBtn.style.display = showButton ? 'block' : 'none';
+            scrollBtn.classList.toggle('up', window.scrollY + window.innerHeight >= document.body.scrollHeight);
+        });
+
+        scrollBtn.addEventListener('click', () => {
+            const scrollOptions = { behavior: 'smooth' };
+            if (!scrollBtn.classList.contains('up')) {
+                window.scrollTo({ top: document.body.scrollHeight, ...scrollOptions });
+            } else {
+                window.scrollTo({ top: 0, ...scrollOptions });
+            }
+        });
+    </script>
+
+    <!--Script Set 3-->
+    <script>
+        // Function to submit the form using AJAX
+        function submitForm() {
+            const form = document.getElementById('my-form');
+            const formData = new FormData(form);
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', form.action, true);
+            xhr.setRequestHeader('_apikey', '98b1eb63090053e3111a0fc7fafd6e3cbf4dc31d5406429b1b4dfb0434b58841');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    console.log(xhr.responseText);
+                    // You can add a success message or redirect the user to a thank you page here
+                }
+            };
+            xhr.send(formData);
+        }
+    </script>
+
+    <!-- Service Worker Script-->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js', { scope: '/' })
+                    .then(registration => {
+                        console.log('Service worker registered with scope:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.log('Service worker registration failed:', error);
+                    });
+            });
+        }
+    </script>
+
+    <!-- Clear Cookies Script-->
+    <script>
+        window.addEventListener("beforeunload", function () {
+            // Clear cookies
+            document.cookie.split(";").forEach(function (cookie) {
+                document.cookie = cookie.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+            });
+
+            // Clear cache (if possible)
+            if (caches && caches.keys) {
+                caches.keys().then(function (keys) {
+                    keys.forEach(function (key) {
+                        caches.delete(key);
+                    });
+                });
+            }
+        });
+    </script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+    <!--Preloader Script-->
+    <script>
+        // Preloader
+        $(window).on('load', function () {
+            $('.preloader').fadeOut('slow');
+        });
+    </script>
+
 </body>
+
 </html>

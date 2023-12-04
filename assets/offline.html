@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Offline Page</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Set a background color */
+    body {
+      background-color: #f8f9fa;
+    }
+
+    /* Center the content vertically */
+    .vh-100 {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Style the heading */
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    /* Style the message */
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row vh-100 justify-content-center">
+      <div class="col-md-8">
+        <h1>Oops! You're Offline.</h1>
+        <p>Please check your internet connection and try again.</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Clear localStorage before closing the website
+    window.addEventListener('beforeunload', function () {
+      window.localStorage.clear();
+    });
+  </script>
+</body>
+
+</html>
