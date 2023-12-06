@@ -1,11 +1,9 @@
 /* General Styles */
-#download {
-  background-color: #FFF;
-}
-
+#download,
 #get-in-touch {
-  background-color: #eee;
-  color: #000;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 /* Carousel Control Styles */
@@ -35,7 +33,6 @@
 .fade-in {
   animation: fadeIn 1.5s ease-in-out;
 }
-
 
 .preloader {
   position: fixed;
@@ -71,6 +68,11 @@
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.3);
   transform: scale(0);
+}
+
+.preloader-inner::before,
+.preloader-inner::after {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .preloader-inner::before {
@@ -110,19 +112,6 @@
   }
 }
 
-@keyframes preloader {
-  0% {
-    transform: scale(0);
-  }
-
-  100% {
-    transform: scale(1);
-    opacity: 0;
-  }
-}
-
-
-
 #scrollBtn {
   position: fixed;
   bottom: 20px;
@@ -136,12 +125,10 @@
   padding: 15px;
   border-radius: 50%;
   display: none;
-  /* hide the button by default */
 }
 
 #scrollBtn.up {
   transform: rotate(180deg);
-  /* rotate the button for "up" state */
 }
 
 #scrollBtn:hover {
@@ -152,13 +139,8 @@
   box-sizing: content-box;
 }
 
-.contact-form {
-  margin-bottom: 50px;
-}
-
 .navbar {
   min-height: 80px;
-  /* Change this value to increase or decrease the navbar height */
 }
 
 /* Hover animation for button */
@@ -272,6 +254,61 @@
     opacity: 0;
   }
 }
+#get-in-touch {
+  background-color: #eee;
+  color: #000;
+  padding: 50px 0;
+}
+
+.contact-form {
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  color: #333;
+}
+
+.contact-form form {
+  margin-top: 30px;
+}
+
+.success-message {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: #4caf50;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.loader-wrapper {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.loader {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+/* Add more styling as needed */
 
 .loader-wrapper,
 .success-message {
@@ -305,19 +342,9 @@
   }
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 .success-message {
   flex-direction: column;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 30px;
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
@@ -338,8 +365,9 @@
 
 /* Footer section */
 footer {
-  background-color: #212529;
+  background-color: rgba(33, 37, 41, 0.9);
   color: #fff;
+  backdrop-filter: blur(10px);
 }
 
 footer a {
@@ -406,7 +434,6 @@ footer .text-md-right {
   font-size: 18px;
   margin-bottom: 0;
   display: flex;
-  /* added to center content horizontally and vertically */
   justify-content: center;
   align-items: center;
 }
@@ -418,49 +445,38 @@ footer .text-md-right {
 
 #counter #visitCount {
   color: #e3e622;
-  /* yellow color for user count */
 }
 
 #counter #country {
   color: #007bff;
-  /* blue color for user country */
 }
-
-
 
 .popup-container {
   display: none;
-  /* hides the container by default */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  /* adds a semi-transparent black overlay */
   z-index: 999;
-  /* ensures that the container is above other elements */
 }
 
 .popup-content {
   position: absolute;
-  /* positions the content inside the container */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* centers the content vertically and horizontally */
   max-width: 90%;
   padding: 2rem;
   background-color: white;
   border-radius: 0.5rem;
   text-align: center;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  /* adds a shadow to the content */
 }
 
 .close-btn {
   position: absolute;
-  /* positions the close button inside the content */
   top: 1rem;
   right: 1rem;
   font-size: 2rem;
@@ -469,15 +485,12 @@ footer .text-md-right {
   border: none;
   cursor: pointer;
   color: #333;
-  /* sets the color of the close button */
   transition: color 0.3s ease;
-  /* adds a color transition */
 }
 
 .close-btn:hover,
 .close-btn:focus {
   color: red;
-  /* changes the color of the close button on hover/focus */
   outline: none;
 }
 
