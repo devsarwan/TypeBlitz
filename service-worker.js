@@ -1,31 +1,34 @@
 const CACHE_NAME = "my-app-cache-v1";
 const urlsToCache = [
   "/",
-  "/index.html",
-  "assets/preloader.css",
-  "assets/common.css",
-  "assets/img/skill.png",
-  "assets/img/6139.jpg",
-  "assets/img/skill-128.png",
-  "assets/img/skill-192.png",
-  "assets/img/skill-512.png",
-  "/assets/v1.2.html",
-  "/assets/v1.2.6.8.html",
-  "/assets/v1.6.html",
-  "/assets/v1.8.html",
-  "/assets/v2.0.html",
-  "/assets/v2.2.html",
-  "/assets/v2.0.0.4.html",
+  "index.html",  // Assuming this is at the root level
+  "manifest.json",
+  "robots.txt",
+
+  "production/files/giphy.gif",
+  "production/files/v1.2.html",
+  "production/files/v1.4.html",
+  "production/redirect.html",
+  "production/version.txt",
+
+  "assets/img/TypeBlitz-128.png",
+  "assets/img/TypeBlitz-192.png",
+  "assets/img/TypeBlitz-512.png",
+  "assets/img/TypeBlitz.ico",
+
   "assets/screenshots/1.png",
   "assets/screenshots/2.png",
   "assets/screenshots/3.png",
   "assets/screenshots/4.png",
   "assets/screenshots/5.png",
   "assets/screenshots/6.png",
-  "assets/screenshots/7.png",
-  "assets/screenshots/8.png",
+
+  "assets/preloader.css",
+  "assets/common.css",
+
   "assets/404.html",
   "assets/offline.html",
+  "assets/MIT_License.html",
 ];
 
 self.addEventListener("install", (event) => {

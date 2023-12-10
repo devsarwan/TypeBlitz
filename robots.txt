@@ -1,7 +1,5 @@
 User-agent: *
 Disallow: /.github/
 Disallow: /files/
-Disallow: /download_file/
-Disallow: /v1.2/
-Disallow: /v1.6/
-Disallow: /redic/
+Disallow: /production/
+Disallow: /assets/
