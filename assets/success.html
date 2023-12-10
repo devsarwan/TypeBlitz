@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Page</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Success Message Styles */
+        .success-message {
+            display: none;
+            text-align: center;
+            margin: 5%;
+            padding: 2%;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+        }
+
+        /* Loader Styles */
+        .loader-wrapper {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Adjust the background color and opacity as needed */
+            z-index: 9999;
+        }
+
+        .loader {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -25px;
+            /* Half of the loader's height */
+            margin-left: -25px;
+            /* Half of the loader's width */
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Media Queries for Responsive Design */
+        @media only screen and (max-width: 600px) {
+
+            .success-message,
+            .loader-wrapper {
+                margin: 10%;
+            }
+        }
+
+        @media only screen and (min-width: 601px) and (max-width: 1024px) {
+
+            .success-message,
+            .loader-wrapper {
+                margin: 7%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        <i class="fas fa-check-circle"></i>
+        <p>Your message has been sent successfully.</p>
+    </div>
+
+    <!-- Loader Wrapper -->
+    <div class="loader-wrapper" id="loaderWrapper">
+        <div class="loader"></div>
+    </div>
+
+    <script>
+        // Redirect to the first link, and if it fails, try the second link
+        function redirectToFirstOrSecondLink() {
+            window.location.href = 'https://typeblitz.tech/'; // First link
+            setTimeout(function () {
+                window.location.href = 'https://typeblitz.netlify.app/'; // Second link
+            }, 5000); // Adjust the time as needed
+        }
+
+        // Show success message and then redirect after 4 to 5 seconds
+        document.addEventListener("DOMContentLoaded", function () {
+            var successMessage = document.getElementById('successMessage');
+            var loaderWrapper = document.getElementById('loaderWrapper');
+
+            // Display success message
+            successMessage.style.display = 'block';
+
+            // Display loader for 4 to 5 seconds
+            setTimeout(function () {
+                successMessage.style.display = 'none';
+                loaderWrapper.style.display = 'block';
+
+                // Redirect after 4 to 5 seconds
+                setTimeout(function () {
+                    redirectToFirstOrSecondLink();
+                }, 4000); // Adjust the time as needed
+            }, 4000); // Adjust the time as needed
+        });
+    </script>
+
+</body>
+
+</html>
