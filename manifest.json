@@ -1,7 +1,7 @@
 {
-  "name": "Skill Improver",
-  "short_name": "Skill Improver",
-  "description": "Skill Improver - an easy-to-use, cutting-edge application designed for beginners and experienced typists alike. Enhance your typing skills and increase your speed.",
+  "name": "TypeBlitz",
+  "short_name": "TypeBlitz",
+  "description": "TypeBlitz - an easy-to-use, cutting-edge application designed for beginners and experienced typists alike. Enhance your typing skills and increase your speed.",
   "icons": [
     {
       "src": "assets/img/TypeBlitz-128.png",
