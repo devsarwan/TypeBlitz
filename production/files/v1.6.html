@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BN5JC7B3SH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BN5JC7B3SH');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Enhance your skills with TypeBlitz, the innovative learning app. Download the latest version (v1.2) now for an immersive learning experience.">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="keywords" content="skill improvement, learning, development, Sarwan Yadav, Download the latest version">
+  <meta name="author" content="Sarwan Yadav">
+  <meta name="theme-color" content="#RRGGBB">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <title>Download TypeBlitz: v1.6</title>
+  <style>
+    body {
+      background-color: #F0F8FF;
+    }
+
+    /* Additional CSS for a more designful download button */
+    #download a {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      text-decoration: none;
+      background: linear-gradient(45deg, #4CAF50, #0076CE);
+      color: #fff;
+      border-radius: 8px;
+      transition: background 0.3s ease, filter 0.3s ease;
+    }
+
+    #download a:hover {
+      background: linear-gradient(45deg, #0076CE, #4CAF50);
+      filter: blur(2px);
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container mt-5" id="container">
+    <h1 class="text-center mb-5">Upgrade Your Typing Skills with TypeBlitz</h1>
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="card">
+          <div class="card-header">
+            Version Information
+          </div>
+          <div class="card-body">
+            <p><strong>Version:</strong> 1.6 </p>
+            <p><strong>User Interface (UI):</strong> 1.2</p>
+            <p><strong>Release Date:</strong> 20th December 2023</p>
+            <p><strong>File Size:</strong> 34 MB (approx)</p>
+          </div>
+        </div>
+        <div class="card mt-4">
+          <div class="card-header">
+            About This Version
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>We're excited to announce that updates will be systematically deployed throughout the year, taking
+                into account our limited availability of developers.</li>
+                <br>
+              <li><b>Addressing Performance Lag:</b> We acknowledge the performance issues, and our team is actively
+                working on enhancing the overall speed
+                and efficiency of TypeBlitz to provide you with a smoother experience.</li>
+
+              <li><b>Redesigned UI for Paragraph and Word Pages:</b> Experience an improved user interface on the
+                'Paragraph' and 'Word' pages with our latest redesign,
+                aimed at offering a more visually appealing and user-friendly layout.</li>
+
+              <li><b>About Section Makeover:</b> Discover the all-new look and user interface of our 'About' section. We
+                have revamped it to provide a
+                fresh and engaging experience for our users.</li>
+
+              <li><b>Updator Revamp:</b> We have overhauled the Updator, addressing previous errors that may have
+                occurred during the
+                installer's opening. The latest bug-free version ensures a seamless updating process, contributing to an
+                enhanced user experience.</li>
+
+              <li><b>Continuous Improvement Commitment:</b> Your feedback is invaluable to us, and we remain dedicated
+                to making TypeBlitz the premier
+                learning platform. Our commitment to continuous improvement drives us to create a better learning
+                environment for our users.</li>
+              <br>
+              <li><b>Thank You for Choosing TypeBlitz:</b></li>
+              <br>
+              <li>Once again, we express our gratitude for choosing <b>TypeBlitz!</b> We are excited about the journey
+                ahead and look forward to providing you with an even better learning experience.</li>
+            </ul>
+
+
+          </div>
+        </div>
+        <div class="text-center mt-4 mb-5" id="download">
+          <a href="https://typeblitz.netlify.app/production/files/v1.6/TypeBlitz%20-%20Setup.exe">Download App</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- GSAP and jQuery/Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script>
+    // Animate the container with glass blur effect
+    gsap.from("#container", {
+      opacity: 0,
+      duration: 1,
+      ease: "power2.out",
+      filter: "blur(10px)",
+    });
+
+    // Animate the download button
+    gsap.from("#download", {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      ease: "power2.out",
+    });
+
+    // Animate the cards
+    gsap.from(".card", {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      ease: "power2.out",
+      stagger: 0.2,
+      delay: 0.8,
+    });
+  </script>
+  <script>
+    // Clear localStorage before closing the website
+    window.addEventListener('beforeunload', function () {
+      window.localStorage.clear();
+    });
+  </script>
+  <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""
+      referrerpolicy="no-referrer-when-downgrade" /></noscript>
+</body>
+
+</html>
